@@ -1,8 +1,11 @@
+import { Container } from './components/Container'
+import { Aside } from './components/Aside'
+
 function App() {
   return (
-    <>
-      <h1>Poupapp</h1>
-    </>
+    <Container>
+      <Aside/>
+    </Container>
   )
 }
 
