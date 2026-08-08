@@ -5,6 +5,7 @@ import { Main } from './components/Main'
 import { Typography } from './components/Typography'
 import Card from './components/Card'
 import { DailyBudget } from './components/DailyBudget'
+import { SavingStatus } from './components/SavingStatus'
 
 function App() {
   return (
@@ -26,16 +27,18 @@ function App() {
                 </Card.Header>
                 <Card.Body>
                   <DailyBudget value={200}/>
-
                 </Card.Body>
-
+              </Card>
+              <Card>
+                <Card.Header>
+                  Progresso da meta financeira
+                </Card.Header>
+                <Card.Body>
+                  <SavingStatus percent={40} />
+                </Card.Body>
               </Card>
             </section>
           </div>
-
-
-
-
         </Main>
     </Container>
   )
