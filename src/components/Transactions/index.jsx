@@ -1,6 +1,9 @@
 import { Button } from "../Button"
 import { IconCurrency } from "../icons"
 import { TransactionItem } from "../TransactionItem"
+import { List } from "../List"
+import { ListItem } from "../ListItem"
+
 import styles from './transactions.module.css'
 
 export const Transactions = () => {
@@ -27,20 +30,21 @@ export const Transactions = () => {
         "date": "2024-10-05T00:00:00-03:00"
         }
     ]
-    
+
     return (
         <>
-            <ul className={styles.list}>
+            <List>
                 {items.map( (transactionItem, index) => {
                     return (
-                        <li key={index}>
+                        <ListItem key={index}>
                             <TransactionItem  item={transactionItem} />
 
-                        </li>
+                        </ListItem>
 
                     )
                 })}
-            </ul>
+
+            </List>
             <div className={styles.actions}>
                 <Button>
                     <IconCurrency/> Adicionar transação
